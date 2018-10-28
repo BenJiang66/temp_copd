@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "C:\\Users\\Ben\\AndroidStudioProjects\\COPDHealthCare\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_action_tombstone.xml",
+        "source": "C:\\Users\\Ben\\.android\\build-cache\\9a10485cd1eb5d3c4b22b1f11faf9266603b6180\\output\\res\\layout-v21\\notification_action_tombstone.xml"
+    },
+    {
+        "merged": "C:\\Users\\Ben\\AndroidStudioProjects\\COPDHealthCare\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_template_icon_group.xml",
+        "source": "C:\\Users\\Ben\\.android\\build-cache\\9a10485cd1eb5d3c4b22b1f11faf9266603b6180\\output\\res\\layout-v21\\notification_template_icon_group.xml"
+    },
+    {
+        "merged": "C:\\Users\\Ben\\AndroidStudioProjects\\COPDHealthCare\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_action.xml",
+        "source": "C:\\Users\\Ben\\.android\\build-cache\\9a10485cd1eb5d3c4b22b1f11faf9266603b6180\\output\\res\\layout-v21\\notification_action.xml"
+    },
+    {
+        "merged": "C:\\Users\\Ben\\AndroidStudioProjects\\COPDHealthCare\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_template_custom_big.xml",
+        "source": "C:\\Users\\Ben\\.android\\build-cache\\9a10485cd1eb5d3c4b22b1f11faf9266603b6180\\output\\res\\layout-v21\\notification_template_custom_big.xml"
+    }
+]

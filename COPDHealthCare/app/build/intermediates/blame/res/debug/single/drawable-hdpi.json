@@ -1,0 +1,50 @@
+[
+    {
+        "merged": "C:\\Users\\Ben\\AndroidStudioProjects\\COPDHealthCare\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_notification.png",
+        "source": "C:\\Users\\Ben\\AndroidStudioProjects\\COPDHealthCare\\app\\src\\main\\res\\drawable-hdpi\\ic_notification.png"
+    },
+    {
+        "merged": "C:\\Users\\Ben\\AndroidStudioProjects\\COPDHealthCare\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_good.png",
+        "source": "C:\\Users\\Ben\\AndroidStudioProjects\\COPDHealthCare\\app\\src\\main\\res\\drawable-hdpi\\ic_good.png"
+    },
+    {
+        "merged": "C:\\Users\\Ben\\AndroidStudioProjects\\COPDHealthCare\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_pause.png",
+        "source": "C:\\Users\\Ben\\AndroidStudioProjects\\COPDHealthCare\\app\\src\\main\\res\\drawable-hdpi\\ic_pause.png"
+    },
+    {
+        "merged": "C:\\Users\\Ben\\AndroidStudioProjects\\COPDHealthCare\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_leaf.png",
+        "source": "C:\\Users\\Ben\\AndroidStudioProjects\\COPDHealthCare\\app\\src\\main\\res\\drawable-hdpi\\ic_leaf.png"
+    },
+    {
+        "merged": "C:\\Users\\Ben\\AndroidStudioProjects\\COPDHealthCare\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_sad.png",
+        "source": "C:\\Users\\Ben\\AndroidStudioProjects\\COPDHealthCare\\app\\src\\main\\res\\drawable-hdpi\\ic_sad.png"
+    },
+    {
+        "merged": "C:\\Users\\Ben\\AndroidStudioProjects\\COPDHealthCare\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_resume.png",
+        "source": "C:\\Users\\Ben\\AndroidStudioProjects\\COPDHealthCare\\app\\src\\main\\res\\drawable-hdpi\\ic_resume.png"
+    },
+    {
+        "merged": "C:\\Users\\Ben\\AndroidStudioProjects\\COPDHealthCare\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_action_name.png",
+        "source": "C:\\Users\\Ben\\AndroidStudioProjects\\COPDHealthCare\\app\\src\\main\\res\\drawable-hdpi\\ic_action_name.png"
+    },
+    {
+        "merged": "C:\\Users\\Ben\\AndroidStudioProjects\\COPDHealthCare\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_dashclock.png",
+        "source": "C:\\Users\\Ben\\AndroidStudioProjects\\COPDHealthCare\\app\\src\\main\\res\\drawable-hdpi\\ic_dashclock.png"
+    },
+    {
+        "merged": "C:\\Users\\Ben\\AndroidStudioProjects\\COPDHealthCare\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_user.png",
+        "source": "C:\\Users\\Ben\\AndroidStudioProjects\\COPDHealthCare\\app\\src\\main\\res\\drawable-hdpi\\ic_user.png"
+    },
+    {
+        "merged": "C:\\Users\\Ben\\AndroidStudioProjects\\COPDHealthCare\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_launcher.png",
+        "source": "C:\\Users\\Ben\\AndroidStudioProjects\\COPDHealthCare\\app\\src\\main\\res\\drawable-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Ben\\AndroidStudioProjects\\COPDHealthCare\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_book.png",
+        "source": "C:\\Users\\Ben\\AndroidStudioProjects\\COPDHealthCare\\app\\src\\main\\res\\drawable-hdpi\\ic_book.png"
+    },
+    {
+        "merged": "C:\\Users\\Ben\\AndroidStudioProjects\\COPDHealthCare\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_measurement.png",
+        "source": "C:\\Users\\Ben\\AndroidStudioProjects\\COPDHealthCare\\app\\src\\main\\res\\drawable-hdpi\\ic_measurement.png"
+    }
+]

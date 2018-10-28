@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="C:\Users\Ben\AndroidStudioProjects\COPDHealthCare\jsch-0.1.54\jsch-0.1.54.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="0d7d8aba0d11e8cd2f775f47cd3a6cfbf2837da4">
+        <dex dex="C:\Users\Ben\AndroidStudioProjects\COPDHealthCare\app\build\intermediates\transforms\dex\debug\folders\1000\4\jsch-0.1.54_c52f492d28218b8a563056a44f6fcee1c5778bb5\classes.dex" />
+    </item>
+
+</items>

@@ -1,0 +1,30 @@
+[
+    {
+        "merged": "C:\\Users\\Ben\\AndroidStudioProjects\\COPDHealthCare\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_user.png",
+        "source": "C:\\Users\\Ben\\AndroidStudioProjects\\COPDHealthCare\\app\\src\\main\\res\\drawable-xhdpi\\ic_user.png"
+    },
+    {
+        "merged": "C:\\Users\\Ben\\AndroidStudioProjects\\COPDHealthCare\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_leaf.png",
+        "source": "C:\\Users\\Ben\\AndroidStudioProjects\\COPDHealthCare\\app\\src\\main\\res\\drawable-xhdpi\\ic_leaf.png"
+    },
+    {
+        "merged": "C:\\Users\\Ben\\AndroidStudioProjects\\COPDHealthCare\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_book.png",
+        "source": "C:\\Users\\Ben\\AndroidStudioProjects\\COPDHealthCare\\app\\src\\main\\res\\drawable-xhdpi\\ic_book.png"
+    },
+    {
+        "merged": "C:\\Users\\Ben\\AndroidStudioProjects\\COPDHealthCare\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_action_name.png",
+        "source": "C:\\Users\\Ben\\AndroidStudioProjects\\COPDHealthCare\\app\\src\\main\\res\\drawable-xhdpi\\ic_action_name.png"
+    },
+    {
+        "merged": "C:\\Users\\Ben\\AndroidStudioProjects\\COPDHealthCare\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_good.png",
+        "source": "C:\\Users\\Ben\\AndroidStudioProjects\\COPDHealthCare\\app\\src\\main\\res\\drawable-xhdpi\\ic_good.png"
+    },
+    {
+        "merged": "C:\\Users\\Ben\\AndroidStudioProjects\\COPDHealthCare\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_measurement.png",
+        "source": "C:\\Users\\Ben\\AndroidStudioProjects\\COPDHealthCare\\app\\src\\main\\res\\drawable-xhdpi\\ic_measurement.png"
+    },
+    {
+        "merged": "C:\\Users\\Ben\\AndroidStudioProjects\\COPDHealthCare\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_sad.png",
+        "source": "C:\\Users\\Ben\\AndroidStudioProjects\\COPDHealthCare\\app\\src\\main\\res\\drawable-xhdpi\\ic_sad.png"
+    }
+]

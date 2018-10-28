@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "C:\\Users\\Ben\\AndroidStudioProjects\\COPDHealthCare\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_introduce.xml",
+        "source": "C:\\Users\\Ben\\AndroidStudioProjects\\COPDHealthCare\\app\\src\\main\\res\\menu\\menu_introduce.xml"
+    },
+    {
+        "merged": "C:\\Users\\Ben\\AndroidStudioProjects\\COPDHealthCare\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_history.xml",
+        "source": "C:\\Users\\Ben\\AndroidStudioProjects\\COPDHealthCare\\app\\src\\main\\res\\menu\\menu_history.xml"
+    },
+    {
+        "merged": "C:\\Users\\Ben\\AndroidStudioProjects\\COPDHealthCare\\app\\build\\intermediates\\res\\merged\\debug\\menu\\activity_main_drawer.xml",
+        "source": "C:\\Users\\Ben\\AndroidStudioProjects\\COPDHealthCare\\app\\src\\main\\res\\menu\\activity_main_drawer.xml"
+    },
+    {
+        "merged": "C:\\Users\\Ben\\AndroidStudioProjects\\COPDHealthCare\\app\\build\\intermediates\\res\\merged\\debug\\menu\\main.xml",
+        "source": "C:\\Users\\Ben\\AndroidStudioProjects\\COPDHealthCare\\app\\src\\main\\res\\menu\\main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Ben\\AndroidStudioProjects\\COPDHealthCare\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_health_article.xml",
+        "source": "C:\\Users\\Ben\\AndroidStudioProjects\\COPDHealthCare\\app\\src\\main\\res\\menu\\menu_health_article.xml"
+    },
+    {
+        "merged": "C:\\Users\\Ben\\AndroidStudioProjects\\COPDHealthCare\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_health_education.xml",
+        "source": "C:\\Users\\Ben\\AndroidStudioProjects\\COPDHealthCare\\app\\src\\main\\res\\menu\\menu_health_education.xml"
+    }
+]

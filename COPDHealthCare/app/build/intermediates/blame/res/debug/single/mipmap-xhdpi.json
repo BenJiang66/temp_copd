@@ -1,0 +1,38 @@
+[
+    {
+        "merged": "C:\\Users\\Ben\\AndroidStudioProjects\\COPDHealthCare\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\ic_history.png",
+        "source": "C:\\Users\\Ben\\AndroidStudioProjects\\COPDHealthCare\\app\\src\\main\\res\\mipmap-xhdpi\\ic_history.png"
+    },
+    {
+        "merged": "C:\\Users\\Ben\\AndroidStudioProjects\\COPDHealthCare\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\ic_calendar.png",
+        "source": "C:\\Users\\Ben\\AndroidStudioProjects\\COPDHealthCare\\app\\src\\main\\res\\mipmap-xhdpi\\ic_calendar.png"
+    },
+    {
+        "merged": "C:\\Users\\Ben\\AndroidStudioProjects\\COPDHealthCare\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\ic_lung.png",
+        "source": "C:\\Users\\Ben\\AndroidStudioProjects\\COPDHealthCare\\app\\src\\main\\res\\mipmap-xhdpi\\ic_lung.png"
+    },
+    {
+        "merged": "C:\\Users\\Ben\\AndroidStudioProjects\\COPDHealthCare\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\ic_lung_border.png",
+        "source": "C:\\Users\\Ben\\AndroidStudioProjects\\COPDHealthCare\\app\\src\\main\\res\\mipmap-xhdpi\\ic_lung_border.png"
+    },
+    {
+        "merged": "C:\\Users\\Ben\\AndroidStudioProjects\\COPDHealthCare\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\ic_home.png",
+        "source": "C:\\Users\\Ben\\AndroidStudioProjects\\COPDHealthCare\\app\\src\\main\\res\\mipmap-xhdpi\\ic_home.png"
+    },
+    {
+        "merged": "C:\\Users\\Ben\\AndroidStudioProjects\\COPDHealthCare\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\ic_launcher_round.png",
+        "source": "C:\\Users\\Ben\\AndroidStudioProjects\\COPDHealthCare\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\Ben\\AndroidStudioProjects\\COPDHealthCare\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\ic_lung_white.png",
+        "source": "C:\\Users\\Ben\\AndroidStudioProjects\\COPDHealthCare\\app\\src\\main\\res\\mipmap-xhdpi\\ic_lung_white.png"
+    },
+    {
+        "merged": "C:\\Users\\Ben\\AndroidStudioProjects\\COPDHealthCare\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\ic_leaf.png",
+        "source": "C:\\Users\\Ben\\AndroidStudioProjects\\COPDHealthCare\\app\\src\\main\\res\\mipmap-xhdpi\\ic_leaf.png"
+    },
+    {
+        "merged": "C:\\Users\\Ben\\AndroidStudioProjects\\COPDHealthCare\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\ic_launcher.png",
+        "source": "C:\\Users\\Ben\\AndroidStudioProjects\\COPDHealthCare\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
+    }
+]

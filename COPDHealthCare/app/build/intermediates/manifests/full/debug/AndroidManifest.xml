@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="mitlab.ntust.copdwalk"
+    android:versionCode="13"
+    android:versionName="3.0" >
+
+    <uses-sdk
+        android:minSdkVersion="21"
+        android:targetSdkVersion="26" />
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!-- <uses-permission android:name="android.permission.SEND_SMS" /> -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.UPDATE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_WIFI_CREDENTIAL" />
+    <uses-permission android:name="android.permission.OVERRIDE_WIFI_CONFIG" />
+
+    <meta-data
+        android:name="android.support.VERSION"
+        android:value="26.0.0-alpha1" /> <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <application
+        android:name="com.ntust.mitlab.copdwalk.MyApp"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_lungs_48"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.ntust.mitlab.copdwalk.SplashActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.bluetooth.adapter.action.STATE_CHANGED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="main" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.ntust.mitlab.copdwalk.DeviceActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.ntust.mitlab.copdwalk.UserActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.ntust.mitlab.copdwalk.MainActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.ntust.mitlab.copdwalk.HistoryActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.ntust.mitlab.copdwalk.LoginActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.ntust.mitlab.copdwalk.RegisterActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <service
+            android:name="com.ntust.mitlab.copdwalk.StepService.SensorListener"
+            android:enabled="true" >
+            <intent-filter>
+                <action android:name="com.ntust.SensorLinstner" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.ntust.mitlab.copdwalk.Service.BluetoothLeService"
+            android:enabled="true" />
+
+        <receiver android:name="com.ntust.mitlab.copdwalk.PlayReceiver" >
+            <intent-filter android:priority="1000" >
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="com.ntust.mitlab.RestartSensor" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name="com.ntust.mitlab.copdwalk.EventActivity" />
+        <activity
+            android:name="com.ntust.mitlab.copdwalk.HealthEducationActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.ntust.mitlab.copdwalk.UserMeasurementActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.ntust.mitlab.copdwalk.HealthArticleActivity"
+            android:label="@string/title_activity_health_article"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.ntust.mitlab.copdwalk.HistoryDetailActivity"
+            android:label="@string/title_activity_history_detail"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.ntust.mitlab.copdwalk.MeasurementDetailActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.ntust.mitlab.copdwalk.MeasurementScoreActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.ntust.mitlab.copdwalk.SettingActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.ntust.mitlab.copdwalk.MeasurementActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <meta-data
+            android:name="android.support.VERSION"
+            android:value="26.1.0" />
+        <meta-data
+            android:name="android.arch.lifecycle.VERSION"
+            android:value="27.0.0-SNAPSHOT" />
+    </application>
+
+</manifest>
