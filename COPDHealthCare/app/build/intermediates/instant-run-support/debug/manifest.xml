@@ -80,8 +80,9 @@
 
         <service
             android:name="com.ntust.mitlab.copdwalk.StepService.SensorListener"
-            android:enabled="true" >
-            <intent-filter>
+            android:enabled="true"
+            android:persistent="true" >
+            <intent-filter android:priority="1000" >
                 <action android:name="com.ntust.SensorLinstner" />
             </intent-filter>
         </service>

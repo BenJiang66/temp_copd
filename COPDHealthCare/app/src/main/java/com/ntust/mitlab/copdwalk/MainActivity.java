@@ -1234,15 +1234,18 @@ public class MainActivity extends AppCompatActivity
         }
     }
     public void processEnv(String data){
-        if(!data.contains(",")){
-            //Toast.makeText(this, data, Toast.LENGTH_SHORT).show();
-            MyShared.setData(MainActivity.this, "Env_id", data);
-        }
-        else
-        {
-            String[] data_arr = data.split(",");
-            updateEnvData(data_arr[0], data_arr[1], data_arr[2], data_arr[3]);
-            //Toast.makeText(this, data, Toast.LENGTH_SHORT).show();
+        if( !data.equals("")){
+            if(!data.contains(",")){
+                //Toast.makeText(this, data, Toast.LENGTH_SHORT).show();
+                MyShared.setData(MainActivity.this, "env_id", data);
+                updateDeviceID(data);
+            }
+            else
+            {
+                String[] data_arr = data.split(",");
+                updateEnvData(data_arr[0], data_arr[1], data_arr[2], data_arr[3]);
+                //Toast.makeText(this, data, Toast.LENGTH_SHORT).show();
+            }
         }
 
     }
@@ -1746,14 +1749,14 @@ public class MainActivity extends AppCompatActivity
     }
     private void updateEnvData(String temperature, String humidity, String pm, String uv){
         JSONObject json = new JSONObject();
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         try {
-            json.put("deviceid", MyShared.getData(MainActivity.this, "Env_id"));
-            //json.put("deviceid", "A003");
+            json.put("deviceid", MyShared.getData(MainActivity.this, "env_id"));
             json.put("temperature", temperature);
             json.put("humidity", humidity);
             json.put("pm25", pm);
             json.put("uv", uv);
-            json.put("datetime", "2018-10-08 01:02:01");
+            json.put("datetime", sdf.format(Calendar.getInstance().getTime()));
         } catch (JSONException e) {
             e.printStackTrace();
         }
@@ -1768,7 +1771,7 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void processFinish(int state, String result, String endPoint) {
                 if(state==200)
-                    Toast.makeText(MainActivity.this,"update sucess",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this,"update success",Toast.LENGTH_SHORT).show();
                 else{
                     //如果同步失敗,先存入MyShared
                     Toast.makeText(MainActivity.this,"update failed, state:"+state,Toast.LENGTH_SHORT).show();
@@ -1778,5 +1781,53 @@ public class MainActivity extends AppCompatActivity
             }
         });
         httptask.execute();
+    }
+    private void updateDeviceID(String device_id) {
+        JSONObject json = new JSONObject();
+        try {
+            json.put("id", MyShared.getData(MainActivity.this, "id"));
+            json.put("pwd", MyShared.getData(MainActivity.this, "pwd"));
+            String fname = MyShared.getData(MainActivity.this, "name").split(" ")[0];
+            String lname = MyShared.getData(MainActivity.this, "name").split(" ")[1];
+            json.put("fname", fname);
+            json.put("lname", lname);
+            json.put("age", MyShared.getData(MainActivity.this, "age"));
+            json.put("sex", MyShared.getData(MainActivity.this, "sex"));
+            json.put("height", MyShared.getData(MainActivity.this, "height"));
+            json.put("weight", MyShared.getData(MainActivity.this, "weight"));
+            json.put("bmi", MyShared.getData(MainActivity.this, "bmi"));
+            json.put("history", MyShared.getData(MainActivity.this, "history"));
+            json.put("drug", MyShared.getData(MainActivity.this, "drug"));
+            json.put("history_other", MyShared.getData(MainActivity.this, "history_other"));
+            json.put("drug_other", MyShared.getData(MainActivity.this, "drug_other"));
+//            json.put(DEVICE_TYPE.ENV.toString(), device_id);
+            json.put("env_id",device_id);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        HttpTask httptask = new HttpTask("POST", json, "/user/update", null);
+        Log.d("/user/update","json "+json);
+        httptask.setCallback(new AsyncResponse() {
+            @Override
+            public void processFinish(int state, String result, String endPoint) {
+                if(state==200)
+                    Toast.makeText(MainActivity.this,"update env_id sucess",Toast.LENGTH_SHORT).show();
+                else{
+                    //如果同步失敗,先存入MyShared
+                    MyShared.setData(MainActivity.this,"isEnvSync","false");
+                    Toast.makeText(MainActivity.this,"update failed, state:"+state,Toast.LENGTH_SHORT).show();
+                    Log.d("update failed","state: "+state);
+                    Log.d("update failed","result: "+result);
+                }
+            }
+        });
+        httptask.execute();
+
+
     }
 }

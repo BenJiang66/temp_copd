@@ -3,12 +3,21 @@
 
     <item
         is-multidex="true"
-        jar="C:\Users\Ben\AndroidStudioProjects\COPDHealthCare\jsch-0.1.54\jsch-0.1.54.jar"
-        jumboMode="false"
+        jar="C:\Users\Ben\AndroidStudioProjects\COPDHealthCare\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
         optimize="true"
         revision="26.0.2"
-        sha1="0d7d8aba0d11e8cd2f775f47cd3a6cfbf2837da4">
-        <dex dex="C:\Users\Ben\AndroidStudioProjects\COPDHealthCare\app\build\intermediates\transforms\dex\debug\folders\1000\4\jsch-0.1.54_c52f492d28218b8a563056a44f6fcee1c5778bb5\classes.dex" />
+        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
+        <dex dex="C:\Users\Ben\AndroidStudioProjects\COPDHealthCare\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_a08be88ba04ef68a05165f32f49f1d6ca605e109\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Ben\AndroidStudioProjects\COPDHealthCare\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="3586cd2b43d31b43ad246ebcbf583a6a0ca9828b">
+        <dex dex="C:\Users\Ben\AndroidStudioProjects\COPDHealthCare\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_6b8b276307394c0e7552ae4c1e14f247c754c4ce\classes.dex" />
     </item>
 
 </items>

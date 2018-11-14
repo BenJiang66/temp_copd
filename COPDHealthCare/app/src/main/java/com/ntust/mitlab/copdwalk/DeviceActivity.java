@@ -4,10 +4,13 @@ import android.app.AlertDialog;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothManager;
+import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
@@ -27,6 +30,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import static com.ntust.mitlab.copdwalk.Service.BluetoothLeService.DEVICE_ADDR;
 import static com.ntust.mitlab.copdwalk.Service.BluetoothLeService.DEVICE_TYPE;
 
 import com.ntust.mitlab.copdwalk.Callback.AsyncResponse;
@@ -44,6 +48,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import static com.ntust.mitlab.copdwalk.MainActivity.REQUEST_ENABLE_BT;
+import static com.ntust.mitlab.copdwalk.Service.BluetoothLeService.TYPE;
 
 /**
  * Created by mitlab_raymond on 2017/10/3.
@@ -137,6 +142,28 @@ public class DeviceActivity extends AppCompatActivity {
         }
     };
 
+    // this part is ready to perform broadcastReceiver, to do something when get signal from ENV device
+    private final BroadcastReceiver broadcastReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            final String action = intent.getAction();
+            String device = intent.getStringExtra(DEVICE_ADDR);
+            String type = intent.getStringExtra(TYPE);
+            //Log.d("=== DeviceActivity ===", "BroadcastReceiver");
+            if (BluetoothLeService.ACTION_DATA_AVAILABLE.equals(action))
+            {
+                String data = intent.getStringExtra(BluetoothLeService.EXTRA_DATA);
+                //收到Env_ID時會做3件事，1.更新UI 2.存入SharedPreference 3.更新cloud上的Env_ID
+                //這裡只做1, 2跟3會在MainActivity內完成(這邊收broadcast純粹為了即時得到Env_ID並更新UI)
+                if(type.equals(DEVICE_TYPE.ENV.toString())){
+                    if( !data.equals("") && !data.contains(","))
+                        tvEnv.setText(data);
+                }
+            }
+        }
+    };
+
+
     private void updateDeviceID(String device_id) {
         JSONObject json = new JSONObject();
         try {
@@ -185,6 +212,15 @@ public class DeviceActivity extends AppCompatActivity {
 
 
     }
+    private IntentFilter makeGattUpdateIntentFilter() {
+        final IntentFilter intentFilter = new IntentFilter();
+        intentFilter.addAction(BluetoothLeService.ACTION_GATT_CONNECTED);
+        intentFilter.addAction(BluetoothLeService.ACTION_GATT_DISCONNECTED);
+        intentFilter.addAction(BluetoothLeService.ACTION_GATT_SERVICES_DISCOVERED);
+        intentFilter.addAction(BluetoothLeService.ACTION_DATA_AVAILABLE);
+        intentFilter.addAction(BluetoothAdapter.ACTION_STATE_CHANGED);
+        return intentFilter;
+    }
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -197,9 +233,11 @@ public class DeviceActivity extends AppCompatActivity {
         mBluetoothAdapter = bluetoothManager.getAdapter();
         if(mBluetoothAdapter==null)
             finish();
+        registerReceiver(broadcastReceiver, makeGattUpdateIntentFilter());
         deviceAddr_Watch = MyShared.getData(this, DEVICE_TYPE.WATCH.toString());
         deviceAddr_SPO2 = MyShared.getData(this, DEVICE_TYPE.SPO2.toString());
-        //deviceAddr_ENV = MyShared.getData(this, DEVICE_TYPE.ENV.toString());
+        deviceAddr_ENV = MyShared.getData(this, DEVICE_TYPE.ENV.toString());
+        deviceID_ENV = MyShared.getData(this, "env_id".toString());
         Log.d("env_id","env_id="+deviceID_ENV);
         initializeUI();
         myApp =  (MyApp)getApplication();
@@ -225,7 +263,7 @@ public class DeviceActivity extends AppCompatActivity {
         btnWatch.setOnClickListener(btnListener);
         btnSpo2.setOnClickListener(btnListener);
         btnEnv.setOnClickListener(btnListener);
-        updateUI(5);
+        updateUI(6);
         mLeDeviceListAdapter = new LeDeviceListAdapter(this);
         listBLEDevice = scanView.findViewById(R.id.listBLEDevice);
         listBLEDevice.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -383,7 +421,7 @@ public class DeviceActivity extends AppCompatActivity {
                         mBluetoothLeService.disconnectGatt(addr);
                         lastLeftDevice = DEVICE_TYPE.ENV;
                         MyShared.remove(DeviceActivity.this, DEVICE_TYPE.ENV.toString());
-                        updateUI(6);
+                        updateUI(5);
                     }
                     /*
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
@@ -480,9 +518,14 @@ public class DeviceActivity extends AppCompatActivity {
                 break;
             case 4:
                 btnEnv.setText("移除");
-                tvEnv.setText(deviceAddr_ENV);
+                //tvEnv.setText(deviceAddr_ENV);
+                tvEnv.setText("connecting...");
                 break;
             case 5:
+                btnEnv.setText("配對");
+                tvEnv.setText("---");
+                break;
+            case 6:
                 if(deviceAddr_Watch!=null){
                     tvWatch.setText(deviceAddr_Watch);
                     btnWatch.setText("移除");
@@ -492,13 +535,10 @@ public class DeviceActivity extends AppCompatActivity {
                     btnSpo2.setText("移除");
                 }
                 if(deviceAddr_ENV!=null){
-                    tvEnv.setText(deviceAddr_ENV);
+                    //tvEnv.setText(deviceAddr_ENV);
+                    tvEnv.setText(deviceID_ENV);
                     btnEnv.setText("移除");
                 }
-                break;
-            case 6:
-                btnEnv.setText("配對");
-                tvEnv.setText("---");
                 break;
 
         }
@@ -606,7 +646,9 @@ public class DeviceActivity extends AppCompatActivity {
 
     @Override
     protected void onDestroy() {
+
         super.onDestroy();
+        unregisterReceiver(broadcastReceiver);
     }
 
     @Override
